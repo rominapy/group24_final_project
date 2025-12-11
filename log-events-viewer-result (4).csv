@@ -1,0 +1,173 @@
+timestamp,message
+1765437590850,"INIT_START Runtime Version: python:3.12.v101	Runtime Version ARN: arn:aws:lambda:us-east-2::runtime:994aac32248ecf4d69d9f5e9a3a57aba3ccea19d94170a61d5ecf978927e1b0f
+"
+1765437591333,"START RequestId: b3ec32f1-9fa7-4859-87a4-4510ca5e5ed1 Version: $LATEST
+"
+1765437591334,'"=== esp32MotionStore invoked ===
+"
+1765437591334,"Raw event: {}
+"
+1765437591334,"Parsed diff=0, motion=0
+"
+1765437591631,"Stored item in DynamoDB: {'eventId': 'ce5b1e1d-e946-43a2-9823-8cddb56b3c21', 'timestamp': 1765437591, 'diff': Decimal('0'), 'motion': 0}
+"
+1765437591633,"END RequestId: b3ec32f1-9fa7-4859-87a4-4510ca5e5ed1
+"
+1765437591633,"REPORT RequestId: b3ec32f1-9fa7-4859-87a4-4510ca5e5ed1	Duration: 299.52 ms	Billed Duration: 780 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	Init Duration: 480.14 ms	
+"
+1765437801976,"START RequestId: 7a8956e9-73ee-4aa8-9731-874db19c4102 Version: $LATEST
+"
+1765437801991,'"=== esp32MotionStore invoked ===
+"
+1765437801991,"Raw event: {}
+"
+1765437801991,"Parsed diff=0, motion=0
+"
+1765437802252,"Stored item in DynamoDB: {'eventId': '31f5c85a-a38d-4dbd-a77b-f7bf394b320c', 'timestamp': 1765437801, 'diff': Decimal('0'), 'motion': 0}
+"
+1765437802254,"END RequestId: 7a8956e9-73ee-4aa8-9731-874db19c4102
+"
+1765437802254,"REPORT RequestId: 7a8956e9-73ee-4aa8-9731-874db19c4102	Duration: 277.57 ms	Billed Duration: 278 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765437948568,"START RequestId: 04c824fe-e19d-4c3a-ac38-8c5fc30228f2 Version: $LATEST
+"
+1765437948571,'"=== esp32MotionStore invoked ===
+"
+1765437948571,"Raw event: {}
+"
+1765437948571,"Parsed diff=0, motion=0
+"
+1765437948792,"Stored item in DynamoDB: {'eventId': '906548bd-875d-4a9d-aaf2-dedc13e8af71', 'timestamp': 1765437948, 'diff': Decimal('0'), 'motion': 0}
+"
+1765437948813,"END RequestId: 04c824fe-e19d-4c3a-ac38-8c5fc30228f2
+"
+1765437948813,"REPORT RequestId: 04c824fe-e19d-4c3a-ac38-8c5fc30228f2	Duration: 244.62 ms	Billed Duration: 245 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765437968483,"START RequestId: d48743eb-3367-42e8-ac6a-9010dce73a86 Version: $LATEST
+"
+1765437968484,'"=== esp32MotionStore invoked ===
+"
+1765437968484,"Raw event: {}
+"
+1765437968484,"Parsed diff=0, motion=0
+"
+1765437968512,"Stored item in DynamoDB: {'eventId': '9de280ad-3aa7-442b-bc05-6b4d646438b4', 'timestamp': 1765437968, 'diff': Decimal('0'), 'motion': 0}
+"
+1765437968533,"END RequestId: d48743eb-3367-42e8-ac6a-9010dce73a86
+"
+1765437968533,"REPORT RequestId: d48743eb-3367-42e8-ac6a-9010dce73a86	Duration: 49.04 ms	Billed Duration: 50 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765437971288,"START RequestId: 7ee41142-fa0d-45dc-8789-4c5e7f0c76d4 Version: $LATEST
+"
+1765437971289,'"=== esp32MotionStore invoked ===
+"
+1765437971289,"Raw event: {}
+"
+1765437971289,"Parsed diff=0, motion=0
+"
+1765437971295,"Stored item in DynamoDB: {'eventId': '55bbebe3-f9b7-4f99-8b09-7e7b30a134b0', 'timestamp': 1765437971, 'diff': Decimal('0'), 'motion': 0}
+"
+1765437971313,"END RequestId: 7ee41142-fa0d-45dc-8789-4c5e7f0c76d4
+"
+1765437971313,"REPORT RequestId: 7ee41142-fa0d-45dc-8789-4c5e7f0c76d4	Duration: 24.21 ms	Billed Duration: 25 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765437977085,"START RequestId: 890f5965-9843-4e08-b4a1-52039192c0f8 Version: $LATEST
+"
+1765437977085,'"=== esp32MotionStore invoked ===
+"
+1765437977085,"Raw event: {}
+"
+1765437977085,"Parsed diff=0, motion=0
+"
+1765437977092,"Stored item in DynamoDB: {'eventId': 'c6ef2434-e401-45b4-a754-781b97b79963', 'timestamp': 1765437977, 'diff': Decimal('0'), 'motion': 0}
+"
+1765437977113,"END RequestId: 890f5965-9843-4e08-b4a1-52039192c0f8
+"
+1765437977113,"REPORT RequestId: 890f5965-9843-4e08-b4a1-52039192c0f8	Duration: 27.13 ms	Billed Duration: 28 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765437979827,"START RequestId: 95db815b-b7c7-40b9-860f-518b1f70b2a7 Version: $LATEST
+"
+1765437979827,'"=== esp32MotionStore invoked ===
+"
+1765437979827,"Raw event: {}
+"
+1765437979828,"Parsed diff=0, motion=0
+"
+1765437979835,"Stored item in DynamoDB: {'eventId': '305235dd-85ae-4d76-b8db-9c32cd01f06c', 'timestamp': 1765437979, 'diff': Decimal('0'), 'motion': 0}
+"
+1765437979853,"END RequestId: 95db815b-b7c7-40b9-860f-518b1f70b2a7
+"
+1765437979853,"REPORT RequestId: 95db815b-b7c7-40b9-860f-518b1f70b2a7	Duration: 25.17 ms	Billed Duration: 26 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765438261676,"START RequestId: 9b500e85-f43e-44ef-9dbe-4abdea0ee1db Version: $LATEST
+"
+1765438261691,'"=== esp32MotionStore invoked ===
+"
+1765438261691,"Raw event: {}
+"
+1765438261691,"Parsed diff=0, motion=0
+"
+1765438261956,"Stored item in DynamoDB: {'eventId': '4107ccda-519d-4c31-bb5c-d56dfb98054a', 'timestamp': 1765438261, 'diff': Decimal('0'), 'motion': 0}
+"
+1765438261973,"END RequestId: 9b500e85-f43e-44ef-9dbe-4abdea0ee1db
+"
+1765438261973,"REPORT RequestId: 9b500e85-f43e-44ef-9dbe-4abdea0ee1db	Duration: 296.36 ms	Billed Duration: 297 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765438267643,"START RequestId: 76f1ead2-7606-497b-89b8-40147fbbbd38 Version: $LATEST
+"
+1765438267643,'"=== esp32MotionStore invoked ===
+"
+1765438267643,"Raw event: {}
+"
+1765438267643,"Parsed diff=0, motion=0
+"
+1765438267652,"Stored item in DynamoDB: {'eventId': '45e3b485-ac16-48f0-97c6-95781a3110d4', 'timestamp': 1765438267, 'diff': Decimal('0'), 'motion': 0}
+"
+1765438267673,"END RequestId: 76f1ead2-7606-497b-89b8-40147fbbbd38
+"
+1765438267673,"REPORT RequestId: 76f1ead2-7606-497b-89b8-40147fbbbd38	Duration: 29.51 ms	Billed Duration: 30 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765438272726,"START RequestId: 108cd2c8-e3b8-4a0e-b32d-bff37afb576d Version: $LATEST
+"
+1765438272729,'"=== esp32MotionStore invoked ===
+"
+1765438272729,"Raw event: {}
+"
+1765438272729,"Parsed diff=0, motion=0
+"
+1765438272733,"Stored item in DynamoDB: {'eventId': '1dbf33b5-1e37-4f66-babf-81bbd690d728', 'timestamp': 1765438272, 'diff': Decimal('0'), 'motion': 0}
+"
+1765438272753,"END RequestId: 108cd2c8-e3b8-4a0e-b32d-bff37afb576d
+"
+1765438272753,"REPORT RequestId: 108cd2c8-e3b8-4a0e-b32d-bff37afb576d	Duration: 26.01 ms	Billed Duration: 27 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"
+1765438355035,"START RequestId: fc7172cc-eb2b-419b-8875-f18c40583fee Version: $LATEST
+"
+1765438355051,'"=== esp32MotionStore invoked ===
+"
+1765438355051,"Raw event: {""resource"": ""/sensor"", ""path"": ""/sensor"", ""httpMethod"": ""GET"", ""headers"": {""Accept-Encoding"": ""identity;q=1,chunked;q=0.1,*;q=0"", ""Host"": ""fb9l1sywkl.execute-api.us-east-2.amazonaws.com"", ""User-Agent"": ""ESP32HTTPClient"", ""X-Amzn-Trace-Id"": ""Root=1-693a7393-51dfe5ea275e3a9e4e4b6144"", ""X-Forwarded-For"": ""172.58.114.172"", ""X-Forwarded-Port"": ""443"", ""X-Forwarded-Proto"": ""https""}, ""multiValueHeaders"": {""Accept-Encoding"": [""identity;q=1,chunked;q=0.1,*;q=0""], ""Host"": [""fb9l1sywkl.execute-api.us-east-2.amazonaws.com""], ""User-Agent"": [""ESP32HTTPClient""], ""X-Amzn-Trace-Id"": [""Root=1-693a7393-51dfe5ea275e3a9e4e4b6144""], ""X-Forwarded-For"": [""172.58.114.172""], ""X-Forwarded-Port"": [""443""], ""X-Forwarded-Proto"": [""https""]}, ""queryStringParameters"": {""diff"": ""28.60"", ""motion"": ""1""}, ""multiValueQueryStringParameters"": {""diff"": [""28.60""], ""motion"": [""1""]}, ""pathParameters"": null, ""stageVariables"": null, ""requestContext"": {""resourceId"": ""mjuhjt"", ""resourcePath"": ""/sensor"", ""httpMethod"": ""GET"", ""extendedRequestId"": ""Vab_CH0JiYcEOww="", ""requestTime"": ""11/Dec/2025:07:32:35 +0000"", ""path"": ""/PROD/sensor"", ""accountId"": ""975350718328"", ""protocol"": ""HTTP/1.1"", ""stage"": ""PROD"", ""domainPrefix"": ""fb9l1sywkl"", ""requestTimeEpoch"": 1765438355019, ""requestId"": ""d6223b86-cd19-4893-be07-69a63adce0d9"", ""identity"": {""cognitoIdentityPoolId"": null, ""accountId"": null, ""cognitoIdentityId"": null, ""caller"": null, ""sourceIp"": ""172.58.114.172"", ""principalOrgId"": null, ""accessKey"": null, ""cognitoAuthenticationType"": null, ""cognitoAuthenticationProvider"": null, ""userArn"": null, ""userAgent"": ""ESP32HTTPClient"", ""user"": null}, ""domainName"": ""fb9l1sywkl.execute-api.us-east-2.amazonaws.com"", ""deploymentId"": ""dtot1z"", ""apiId"": ""fb9l1sywkl""}, ""body"": null, ""isBase64Encoded"": false}
+"
+1765438355051,"Parsed diff=28.60, motion=1
+"
+1765438355254,"Stored item in DynamoDB: {'eventId': 'b78e5d88-0256-4fba-bab8-35e0c5745fbe', 'timestamp': 1765438355, 'diff': Decimal('28.60'), 'motion': 1}
+"
+1765438355254,"Sending SNS notification: Motion detected!
+"
+1765438355254,"Diff: 28.60
+"
+1765438355254,"Time: Thu Dec 11 07:32:35 2025
+"
+1765438355492,"[ERROR] AuthorizationErrorException: An error occurred (AuthorizationError) when calling the Publish operation: User: arn:aws:sts::975350718328:assumed-role/esp32MotionStore-role-ci1454uu/esp32MotionStore is not authorized to perform: SNS:Publish on resource: arn:aws:sns:us-east-2:975350718328:motionAlerts because no identity-based policy allows the SNS:Publish action
+Traceback (most recent call last):
+  File ""/var/task/lambda_function.py"", line 54, in lambda_handler
+    sns.publish(
+  File ""/var/lang/lib/python3.12/site-packages/botocore/client.py"", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File ""/var/lang/lib/python3.12/site-packages/botocore/context.py"", line 123, in wrapper
+    return func(*args, **kwargs)
+  File ""/var/lang/lib/python3.12/site-packages/botocore/client.py"", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)"
+1765438355513,"END RequestId: fc7172cc-eb2b-419b-8875-f18c40583fee
+"
+1765438355513,"REPORT RequestId: fc7172cc-eb2b-419b-8875-f18c40583fee	Duration: 477.37 ms	Billed Duration: 478 ms	Memory Size: 128 MB	Max Memory Used: 88 MB	
+"

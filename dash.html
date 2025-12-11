@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESP32 Motion Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    h1 { color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }
+    th, td { padding: 10px; border-bottom: 1px solid #ccc; text-align: left; }
+    th { background: #eee; }
+    #latest { font-size: 20px; margin-bottom: 15px; }
+    button { padding: 10px 20px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<h1>ESP32 Motion Dashboard</h1>
+
+<div id="latest">Loading latest event...</div>
+<button onclick="loadData()">Refresh</button>
+
+<table id="eventsTable">
+  <tr>
+    <th>Timestamp</th>
+    <th>Diff</th>
+    <th>Motion</th>
+  </tr>
+</table>
+
+<script>
+// ⭐ This must match your API Gateway endpoint for the reader Lambda ⭐
+const API_URL = "https://fb9l1sywkl.execute-api.us-east-2.amazonaws.com/PROD/events";
+
+async function loadData() {
+  const latestDiv = document.getElementById("latest");
+  const table = document.getElementById("eventsTable");
+
+  latestDiv.textContent = "Loading latest event...";
+
+  try {
+    const res = await fetch(API_URL);
+
+    if (!res.ok) {
+      latestDiv.textContent = "Error: API returned status " + res.status;
+      console.error("API error:", res.status, res.statusText);
+      return;
+    }
+
+    // Get raw JSON from API
+    let data = await res.json();
+    console.log("Raw API data:", data);
+
+    // Normalize possible shapes:
+    // 1) data is already an array          -> [ {...}, {...} ]
+    // 2) data.body is a JSON string array -> { body: "[{...}, {...}]" }
+    // 3) data.body is already an array    -> { body: [ {...}, {...} ] }
+    // 4) data.items is an array           -> { items: [ {...} ] }
+    if (!Array.isArray(data)) {
+      if (Array.isArray(data.body)) {
+        data = data.body;
+      } else if (typeof data.body === "string") {
+        try {
+          data = JSON.parse(data.body);
+        } catch (e) {
+          console.error("Failed to parse data.body JSON:", e);
+        }
+      } else if (Array.isArray(data.items)) {
+        data = data.items;
+      }
+    }
+
+    if (!Array.isArray(data)) {
+      latestDiv.textContent = "Unexpected API response shape. See console.";
+      console.error("Final data is not an array:", data);
+      return;
+    }
+
+    // Handle empty table
+    if (data.length === 0) {
+      latestDiv.textContent = "No events found.";
+      table.innerHTML =
+        `<tr><th>Timestamp</th><th>Diff</th><th>Motion</th></tr>`;
+      return;
+    }
+
+    // Latest event is the first one
+    const latest = data[0];
+    latestDiv.innerHTML =
+      `<b>Latest Motion:</b> diff=${latest.diff}, motion=${latest.motion}
+       <br><small>${new Date(latest.timestamp * 1000)}</small>`;
+
+    // Rebuild table header
+    table.innerHTML =
+      `<tr><th>Timestamp</th><th>Diff</th><th>Motion</th></tr>`;
+
+    // Add all events to table
+    data.forEach(item => {
+      const ts = item.timestamp ? new Date(item.timestamp * 1000) : "N/A";
+      const diff = item.diff ?? "N/A";
+      const motion = item.motion ?? "N/A";
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${ts}</td>
+        <td>${diff}</td>
+        <td>${motion}</td>
+      `;
+      table.appendChild(row);
+    });
+
+  } catch (err) {
+    console.error("Error loading data:", err);
+    latestDiv.textContent = "Failed to load data. Check console.";
+  }
+}
+
+// Load immediately on page open
+loadData();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+timestamp,message
+1765437032870,"INIT_START Runtime Version: python:3.12.v101	Runtime Version ARN: arn:aws:lambda:us-east-2::runtime:994aac32248ecf4d69d9f5e9a3a57aba3ccea19d94170a61d5ecf978927e1b0f
+"
+1765437033483,"START RequestId: fba2d25e-d373-433c-8f58-32c191269f57 Version: $LATEST
+"
+1765437033483,'"=== esp32MotionStore invoked ===
+"
+1765437033483,"Raw event: {""key1"": ""value1"", ""key2"": ""value2"", ""key3"": ""value3""}
+"
+1765437033483,"Parsed diff=0, motion=0
+"
+1765437033837,"[ERROR] ClientError: An error occurred (AccessDeniedException) when calling the PutItem operation: User: arn:aws:sts::975350718328:assumed-role/esp32MotionStore-role-ci1454uu/esp32MotionStore is not authorized to perform: dynamodb:PutItem on resource: arn:aws:dynamodb:us-east-2:975350718328:table/MotionEvents because no identity-based policy allows the dynamodb:PutItem action
+Traceback (most recent call last):
+  File ""/var/task/lambda_function.py"", line 47, in lambda_handler
+    table.put_item(Item=item)
+  File ""/var/lang/lib/python3.12/site-packages/boto3/resources/factory.py"", line 581, in do_action
+    response = action(self, *args, **kwargs)
+  File ""/var/lang/lib/python3.12/site-packages/boto3/resources/action.py"", line 88, in __call__
+    response = getattr(parent.meta.client, operation_name)(*args, **params)
+  File ""/var/lang/lib/python3.12/site-packages/botocore/client.py"", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File ""/var/lang/lib/python3.12/site-packages/botocore/context.py"", line 123, in wrapper
+    return func(*args, **kwargs)
+  File ""/var/lang/lib/python3.12/site-packages/botocore/client.py"", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)"
+1765437033859,"END RequestId: fba2d25e-d373-433c-8f58-32c191269f57
+"
+1765437033859,"REPORT RequestId: fba2d25e-d373-433c-8f58-32c191269f57	Duration: 374.75 ms	Billed Duration: 984 ms	Memory Size: 128 MB	Max Memory Used: 89 MB	Init Duration: 609.06 ms	
+"
+1765437224308,"START RequestId: 3d8fe0e0-dadd-42f3-a2b7-b33923f1cc2b Version: $LATEST
+"
+1765437224317,'"=== esp32MotionStore invoked ===
+"
+1765437224317,"Raw event: {""key1"": ""value1"", ""key2"": ""value2"", ""key3"": ""value3""}
+"
+1765437224317,"Parsed diff=0, motion=0
+"
+1765437224557,"Stored item in DynamoDB: {'eventId': 'f626d008-fe7a-4049-9848-4b8251ac14c0', 'timestamp': 1765437224, 'diff': Decimal('0'), 'motion': 0}
+"
+1765437224578,"END RequestId: 3d8fe0e0-dadd-42f3-a2b7-b33923f1cc2b
+"
+1765437224578,"REPORT RequestId: 3d8fe0e0-dadd-42f3-a2b7-b33923f1cc2b	Duration: 268.46 ms	Billed Duration: 269 ms	Memory Size: 128 MB	Max Memory Used: 89 MB	
+"
