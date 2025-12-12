@@ -68,3 +68,13 @@ High-level data flow:
 
 
 ```markdown
+Hardware Components
+Component/Part	Quantity	Description
+ESP32 TTGO (Wi-Fi enabled)	1	Main microcontroller with integrated Wi-Fi
+LSM6DSO accelerometer	1	3-axis motion sensor (I²C interface)
+Buzzer	1	Audio alert indicator
+LED	1	Visual status / alert indicator
+Push button	1	Device control (e.g., arming/disarming)
+Breadboard	1	Prototyping board
+Jumper wires	1 set	Connections between components
+USB cable / power supply	1	Power and firmware flashing
