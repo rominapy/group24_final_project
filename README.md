@@ -66,8 +66,5 @@ High-level data flow:
 7. **Amazon SNS** sends notifications (email/SMS) to user  
 8. **Amazon CloudWatch** logs events and supports simple dashboards
 
-You can include a block diagram in the repository (e.g., `docs/system_architecture.png`) and link it here:
 
 ```markdown
-![System Architecture](docs/system_architecture.png)
-
