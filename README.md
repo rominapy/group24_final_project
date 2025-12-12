@@ -4,50 +4,6 @@ An IoT-based security device that detects suspicious motion of personal items (e
 
 ---
 
-## Table of Contents
-
-1. [Overview](#overview)  
-2. [Key Features](#key-features)  
-3. [System Architecture](#system-architecture)  
-4. [Hardware Components](#hardware-components)  
-5. [Software Stack](#software-stack)  
-6. [Getting Started](#getting-started)  
-   - [1. Clone the Repository](#1-clone-the-repository)  
-   - [2. Configure the Firmware](#2-configure-the-firmware)  
-   - [3. Configure AWS IoT Core](#3-configure-aws-iot-core)  
-   - [4. Flash the ESP32](#4-flash-the-esp32)  
-7. [Usage](#usage)  
-8. [Project Structure](#project-structure)  
-9. [Future Improvements](#future-improvements)  
-10. [Contributors](#contributors)  
-11. [License](#license)
-
----
-
-## Overview
-
-The **Smart Anti-Theft Motion Alert System** is a portable IoT device designed to help protect personal belongings in public or semi-public spaces such as libraries, coffee shops, and shared offices.
-
-The system combines:
-
-- An **ESP32 TTGO** microcontroller with Wi-Fi,
-- An **LSM6DSO accelerometer** for motion sensing,
-- **AWS IoT Core**, **AWS Lambda**, **Amazon SNS**, and **CloudWatch** for cloud-based alerting and monitoring.
-
-When abnormal motion is detected (e.g., someone picking up or moving the protected item), the device triggers local alarms (LED + buzzer) and publishes an alert message to the cloud, which then notifies the user.
-
----
-
-## Key Features
-
-- **Real-time motion detection** using a 3-axis accelerometer.
-- **Local alerts** via LED and buzzer when suspicious movement is detected.
-- **Secure Wi-Fi communication** using TLS and AWS IoT device certificates.
-- **Cloud-based alerts** using MQTT → AWS IoT Core → Lambda → SNS (e.g., email/SMS).
-- **Basic logging and monitoring** through Amazon CloudWatch (events and metrics).
-- **Modular firmware**: separate tasks for sensing, alerting, and communication.
-
----
 
 ## System Architecture
 
@@ -63,8 +19,85 @@ High-level data flow:
 4. **Wi-Fi Router / Access Point**  
 5. **AWS IoT Core (MQTT Broker)**  
 6. **AWS Lambda** processes incoming MQTT messages  
-7. **Amazon SNS** sends notifications (email/SMS) to user  
+7. **Amazon SNS** sends notifications (email) to user  
 8. **Amazon CloudWatch** logs events and supports simple dashboards
+
+# Smart Anti-Theft Motion Alert System
+
+## Project Information
+
+- **Course:** Internet of Things  
+- **Project Title:** Smart Anti-Theft Motion Alert System  
+- **Team Name:** Avengers  
+- **Team #:** 24  
+- **Members:**
+  - Romina Pouya 
+  - Sana Kimiagar 
+
+---
+
+## Project Overview
+
+This project implements a small IoT device that can be attached to personal items (e.g., backpack, handbag, laptop sleeve) to detect theft-like motion and send alerts.
+
+The system:
+
+- Uses an **ESP32 TTGO** board and an **LSM6DSO accelerometer** to detect motion.
+- Runs a simple threshold-based motion detection algorithm on the ESP32.
+- Triggers a **local alarm** (LED + buzzer) when suspicious motion is detected.
+- Sends a JSON alert message over **Wi-Fi** using **MQTT** to **AWS IoT Core**.
+- Uses **AWS Lambda** and **Amazon SNS** to forward alerts to the user (e.g., email/SMS).
+- Logs events to **CloudWatch** for basic monitoring.
+
+The goal is to demonstrate an end-to-end IoT pipeline: sensing → edge processing → cloud messaging → user notification.
+
+---
+
+## Hardware Used
+
+- ESP32 TTGO (Wi-Fi enabled)  
+- LSM6DSO accelerometer (I²C)  
+- Buzzer  
+- LED  
+- Push button  
+- Breadboard + jumper wires  
+- USB cable / power supply  
+
+---
+
+## System Architecture (Summary)
+
+1. Item with attached device  
+2. LSM6DSO accelerometer measures motion  
+3. ESP32 TTGO:
+   - Reads sensor data over I²C  
+   - Detects abnormal motion  
+   - Controls LED and buzzer  
+   - Publishes MQTT alert to AWS IoT Core  
+4. AWS IoT Core routes the message  
+5. AWS Lambda processes the alert  
+6. Amazon SNS sends a notification to the user  
+7. CloudWatch logs events
+
+---
+
+## Repository Contents
+
+At the top level this repository contains:
+
+- **`FinalProject/`** – ESP32 firmware and project source code used on the device.  
+- **`dash.html`** – HTML page for the simple CloudWatch / dashboard visualization.  
+- **`esp32MotionDashboard-...`** – Exported AWS dashboard configuration files.  
+- **`log-events-viewer-result (1–4).csv`** – Sample log files exported from CloudWatch for testing and analysis.  
+- **`README.md`** – This file.
+
+`.DS_Store` is an OS metadata file and can be ignored.
+
+---
+
+
+
+
 
 
 ```markdown
